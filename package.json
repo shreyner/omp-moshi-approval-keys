@@ -1,0 +1,49 @@
+{
+  "name": "omp-moshi-approval-keys",
+  "version": "0.1.0",
+  "private": true,
+  "description": "oh-my-pi (omp) extension: let Moshi's phone answers (y/n) resolve omp tool approval dialogs.",
+  "keywords": [
+    "omp",
+    "oh-my-pi",
+    "extension",
+    "moshi",
+    "approval"
+  ],
+  "homepage": "https://github.com/shreyner/omp-moshi-approval-keys#readme",
+  "bugs": "https://github.com/shreyner/omp-moshi-approval-keys/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shreyner/omp-moshi-approval-keys.git"
+  },
+  "license": "MIT",
+  "author": "Aleksandr Shreyner",
+  "type": "module",
+  "main": "./src/index.ts",
+  "omp": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "scripts": {
+    "test": "bun test ./test",
+    "check": "tsc -p . && biome check --error-on-warnings .",
+    "lint:fix": "biome check --write ."
+  },
+  "peerDependencies": {
+    "@oh-my-pi/pi-coding-agent": ">=18.11.0 <19"
+  },
+  "peerDependenciesMeta": {
+    "@oh-my-pi/pi-coding-agent": {
+      "optional": true
+    }
+  },
+  "engines": {
+    "bun": ">=1.3.14"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "2.5.15",
+    "@types/bun": "1.4.3",
+    "typescript": "7.0.2"
+  }
+}
